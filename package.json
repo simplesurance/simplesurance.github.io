@@ -1,0 +1,14 @@
+{
+  "name": "simplesurance.github.io",
+  "version": "1.0.0",
+  "description": "✎",
+  "repository": "git@github.com:simplesurance/simplesurance.github.io.git",
+  "author": "Atila Fassina <hey@atilafassina.com>",
+  "license": "MIT",
+  "dependencies": {
+    "next": "beta"
+  },
+  "devDependencies": {
+    "standard": "^10.0.2"
+  }
+}
