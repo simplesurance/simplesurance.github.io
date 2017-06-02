@@ -18,7 +18,18 @@ Considering the current year to be 2017, the *Introduction to Javascript* would 
 ```
 /pages/2017/introduction-to-javascript
 ```
-PS.: this will defined the URL of your post, keep simple, keep it readable and SEO friendly. 😉
+> this will defined the URL of your post, keep simple, keep it readable and SEO friendly. 😉
+
+File Content:
+
+```
+import Post from '../../layouts/post'
+import md from 'markdown-in-js'
+
+export default () => <Post>{ md`
+Write your post here.
+`}</ Post>
+```
 
 4. Push your code and submit a `pull request`
 5. After submiting, go to your `pull request` page, point a `Reviewer` on the sidebar and add the label `post` to it.
