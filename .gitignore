@@ -1,1 +1,9 @@
+# dotfiles
+.DS_store
+.next
+
+# external dependencies
 node_modules
+
+# dynamic
+out
