@@ -30,8 +30,8 @@ export default () => <Post>{ md`
 Write your post here.
 `}</ Post>
 ```
-
-4. Push your code and submit a `pull request`
-5. After submiting, go to your `pull request` page, point a `Reviewer` on the sidebar and add the label `post` to it.
+4. Add your post to `./posts.json`.
+5. Push your code and submit a `pull request`.
+6. After submiting, go to your `pull request` page, point a `Reviewer` on the sidebar and add the label `post` to it.
 
 Thank you. 🎉
