@@ -25,6 +25,15 @@ export default class Repos extends Component {
       <ul>
         {ownRepos.map( repo => (<li key={repo.url}><RepoCard {...repo} /></li>) )}
       </ul>
+      <style jsx>{`
+        ul {
+          list-style: none;
+          display: flex;
+          justify-content: space-around;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+      `}</style>
     </div>)
   }
 }

@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import Repos from '../components/Repos'
+// import Repos from '../components/Repos'
+import PostRequest from '../components/PostRequest'
 import Footer from '../components/Footer'
 
 const colors = {
@@ -10,7 +11,7 @@ const colors = {
 
 export default () => (<div>
   <Head>
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" />
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:600" rel="stylesheet" />
   </Head>
   <style jsx global>{`
     body {
@@ -18,6 +19,7 @@ export default () => (<div>
       padding: 0;
       margin: 0;
       font-family: 'Lato', sans-serif;
+      font-weight: 300;
     }
 
     h1 {
@@ -42,6 +44,6 @@ export default () => (<div>
     <img src="/static/logo-white.svg" alt="Simplesurance logo"/>
     <h1>Simplesurance Tech</h1>
   </header>
-  <Repos />
+  <PostRequest />
   <Footer />
 </div>)
