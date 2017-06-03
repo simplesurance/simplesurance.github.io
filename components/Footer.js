@@ -5,7 +5,7 @@ export default () => (<div>
     </nav>
     <footer>
       <p>
-      crafted with <strong className="love"><span className="heart"></span></strong> by the Simplesurance IT crew
+      crafted with <strong className="love"><span className="heart"></span></strong> by the Simplesurance crew
       </p>
     </footer>
     <style jsx>{`

@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Posts from '../components/Posts'
 // import Repos from '../components/Repos'
 import PostRequest from '../components/PostRequest'
 import Footer from '../components/Footer'
@@ -44,6 +45,7 @@ export default () => (<div>
     <img src="/static/logo-white.svg" alt="Simplesurance logo"/>
     <h1>Simplesurance Tech</h1>
   </header>
+  <Posts />
   <PostRequest />
   <Footer />
 </div>)
