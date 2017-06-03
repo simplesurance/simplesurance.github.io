@@ -1,8 +1,11 @@
 export default () => (
   <footer>
-    crafted with <strong className="love"><span className="heart"></span></strong> by the Simplesurance ITCrowd
+    crafted with <strong className="love"><span className="heart"></span></strong> by the Simplesurance IT crew
     <style jsx>{`
         footer {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
           height: 5rem;
           display: flex;
           justify-content: center;
