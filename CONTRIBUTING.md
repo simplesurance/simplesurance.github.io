@@ -4,7 +4,7 @@ At present, the Simplesurance Tech is a blog intended to Simplesurance personel 
 ## Writing an Article
 writing an article follows the same pattern as subimitting code. First, you create a `branch` with where you add corresponding files of your article, then you create a `pull request` that will be reviewed (grammar and content) by someone self-designated (though it is encouraged that you suggest a well suited reviewer for your content). Once you get an approval for your PR, it will be merged and published.
 
-1. Clone or Fork this repository.
+1. Clone this repository.
 2. Create a new branch from `master`.
 
 Branches should follow a specific naming pattern: `post/{post-title}`.
@@ -18,7 +18,7 @@ Considering the current year to be 2017, the *Introduction to Javascript* would 
 ```
 /pages/2017/introduction-to-javascript
 ```
-> this will defined the URL of your post, keep simple, keep it readable and SEO friendly. 😉
+> this will define the URL of your post, keep it simple, keep it readable and SEO friendly. 😉
 
 File Content:
 
