@@ -5,6 +5,12 @@
       "date": "June 2 , 2017",
       "title": "Hello World",
       "image": "hello-world.jpg"
+    },
+    {
+      "id": "shared_components_monorepo",
+      "date": "June 6 , 2017",
+      "title": "Multi-app React code sharing in a monorepo",
+      "image": "puzzle.jpg"
     }
   ]
 }
