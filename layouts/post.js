@@ -1,6 +1,5 @@
-const Post = ({ children }) => (
-  <article>
-    { children }
-  </article>)
+const Post = ({ children }) => (<article>
+  { children }
+</article>)
 
 export default Post
