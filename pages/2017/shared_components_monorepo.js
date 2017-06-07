@@ -9,11 +9,11 @@ At simplesurance, we've been busy re-engineering big chunks of our codebase to b
 A single repo organization brings some challenges, but it opens some possibilities too. Our monorepo contains everything from the microservices, the older symfony apps still in use, as well as the frontend react web and native apps. This opens door to having more shared code. Frontend-wise, this meant the possibility to finally work with the design team in a company-wide "module palette" and to finally have a consistent, and easily reusable and maintainable design between several apps.
 
 ## TOC
- * [Symbolic links](#symbolic-links)
- * [Webpack and resolve.alias](#webpack-and-resolvealias)
- * [Transpiling exports](#transpiling-exports)
- * [What about assets?](#what-about-assets)
- * [Last notes?](#last-notes)
+ * [Symbolic links](#symboliclinks)
+ * [Webpack and resolve.alias](#webpackandresolvealias)
+ * [Transpiling exports](#transpilingexports)
+ * [What about assets?](#whataboutassets)
+ * [Last notes?](#lastnotes)
 
 ## Symbolic links
 
