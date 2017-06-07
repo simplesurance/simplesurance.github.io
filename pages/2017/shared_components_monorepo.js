@@ -1,7 +1,7 @@
 import Post from '../../layouts/post'
-import md from 'markdown-in-js'
+import { Markdown } from 'react-showdown'
 
-export default () => <Post>{ md`
+const content = `
 # Managing shared components with multiple react js apps in a monorepo
 
 At simplesurance, we've been busy re-engineering big chunks of our codebase to bring it up to speed with the new technologies and software architecture trends. We're transitioning from symfony/twig apps to a more diverse mesh of microservices and apps. We're also moving towards a single git repository, a monorepo.
@@ -126,4 +126,6 @@ And that's it. We had to add the loader dependency to both our project and to th
 ## Last Notes
 
 We're constantly trying to improve our approach at this point, and we're excited for the future of the project. We realize it's hard to create a future-proof architecture that won't let us down 4 years in. Specially in the frontend universe where every day there is a new tech everyone is suddenly using. Double specially in the React universe where there are 15 competing standards for each feature of this technology. I'm looking at you, CSS in JS, but that's for another time.
-`}</ Post>
+`
+
+export default () => <Post><Markdown markup={ content }></Markdown></ Post>
