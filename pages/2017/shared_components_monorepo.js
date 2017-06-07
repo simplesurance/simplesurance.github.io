@@ -19,7 +19,7 @@ A single repo organization brings some challenges, but it opens some possibiliti
 
 After some lengthy highly opinated disucssion, we went for a directory structure that is something like this:
 
-\`\`\`
+
 	ui
 	├─app1
 	╎  └─src
@@ -37,7 +37,7 @@ After some lengthy highly opinated disucssion, we went for a directory structure
 	      ├─colors
 	      ├─icons
 	      └─etc...
-\`\`\`
+
 
 The initial proposal was simple. We would just link the shared \`components\` directory in to each app's source. And we liked the solution, and we implemented it, and then it wasn't so simple. Webpack just doesn't deal with symlinks the way one would expect. It actually resolves the links and then any included packages would not be found in the actual location of the \`components\` directory.
 
