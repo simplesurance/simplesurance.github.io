@@ -17,7 +17,7 @@ A single repo organization brings some challenges, but it opens some possibiliti
 
 ## Symbolic links
 
-After some lengthy highly opinated disucssion, we went for a directory structure that is something like this:
+After some lengthy highly opinionated discussion, we went for a directory structure that is something like this:
 
 
 	ui
@@ -107,7 +107,7 @@ So we ran \`npm init\` on our shared code folder and gave it some minimum settin
 
 ## What about assets?
 
-We eventually ran into the situation where we would also like to share assets like icons, logos and fonts between apps, so putting them in the shared directory made perfect sense. It was simple the extend the construction we had already come up with before to include these assets. We used the package \`file-loader\` to load these files by addind the following rule to our webpack config:
+We eventually ran into the situation where we would also like to share assets like icons, logos and fonts between apps, so putting them in the shared directory made perfect sense. It was simple to extend our setup to accomodate this. We used the module [\`file-loader\`](https://www.npmjs.com/package/file-loader) to load these files by addind the following rule to our webpack config:
 
 	{
 	 test: /\.(png|jpg|svg)$/,
@@ -117,7 +117,7 @@ We eventually ran into the situation where we would also like to share assets li
 	 loader: 'file-loader',
 	}]
 
-And that's it. We had to add the loader dependency to both our project and to the shared components directory. But other than that, graphics we're being loaded after this addition.
+And that's it. We had to add the loader dependency to both our project and to the shared components directory. But other than that, graphics were being loaded after this addition.
 
 	import logoDesktop from 'assets/img/logo.svg'
 	...
@@ -125,7 +125,7 @@ And that's it. We had to add the loader dependency to both our project and to th
 
 ## Last Notes
 
-We're constantly trying to improve our approach at this point, and we're excited for the future of the project. We realize it's hard to create a future-proof architecture that won't let us down 4 years in. Specially in the frontend universe where every day there is a new tech everyone is suddenly using. Double specially in the React universe where there are 15 competing standards for each feature of this technology. I'm looking at you, CSS in JS, but that's for another time.
+We're constantly trying to improve our approach at this point, and we're excited for the future of the project. We realize it's hard to create a future-proof architecture that won't let us down 4 years in. Specially in the frontend universe where every day there is a new technology that everyone is suddenly using. This is especially true in the Reactjs world where there are 15 competing standards for each feature of this technology. I'm looking at you, CSS in JS, but that's for another time.
 `
 
 export default () => <Post><Markdown markup={ content }></Markdown></ Post>
