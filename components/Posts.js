@@ -6,7 +6,7 @@ export default () => (<div>
     Posts
   </h3>
   <ul className="postList">
-    {posts.map( ({id, title, date, image}) => (<li className="post">
+    {posts.map( ({id, title, date, image}) => (<li key={id} className="post">
       <span className="postDate">{date}</span>
       <img className="thumb" src={`./static/posts/${image}`} />
       <Link prefetch href={`${new Date(date).getFullYear()}/${id}`}>
@@ -35,6 +35,7 @@ export default () => (<div>
 
     .post {
       display: flex;
+      max-width: 15em;
       flex-flow: column;
       align-items: center;
       margin-right: 1rem;
@@ -47,7 +48,8 @@ export default () => (<div>
 
     .postTitle {
       padding-top: .5rem;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
+      text-align: center;
       text-decoration: none;
       color: rgb(50,50,50);
       cursor: pointer;

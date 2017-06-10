@@ -2,20 +2,20 @@ import Post from '../../layouts/post'
 import { Markdown } from 'react-showdown'
 
 const content = `
-# Managing shared components with multiple react js apps in a monorepo
+## Managing shared components with multiple react js apps in a monorepo
 
 At simplesurance, we've been busy re-engineering big chunks of our codebase to bring it up to speed with the new technologies and software architecture trends. We're transitioning from symfony/twig apps to a more diverse mesh of microservices and apps. We're also moving towards a single git repository, a monorepo.
 
 A single repo organization brings some challenges, but it opens some possibilities too. Our monorepo contains everything from the microservices, the older symfony apps still in use, as well as the frontend react web and native apps. This opens door to having more shared code. Frontend-wise, this meant the possibility to finally work with the design team in a company-wide "module palette" and to finally have a consistent, and easily reusable and maintainable design between several apps.
 
-## TOC
+### TOC
  * [Symbolic links](#symboliclinks)
  * [Webpack and resolve.alias](#webpackandresolvealias)
  * [Transpiling exports](#transpilingexports)
  * [What about assets?](#whataboutassets)
  * [Last notes?](#lastnotes)
 
-## Symbolic links
+### Symbolic links
 
 After some lengthy highly opinionated discussion, we went for a directory structure that is something like this:
 
@@ -41,7 +41,7 @@ After some lengthy highly opinionated discussion, we went for a directory struct
 
 The initial proposal was simple. We would just link the shared \`components\` directory in to each app's source. And we liked the solution, and we implemented it, and then it wasn't so simple. Webpack just doesn't deal with symlinks the way one would expect. It actually resolves the links and then any included packages would not be found in the actual location of the \`components\` directory.
 
-## Webpack and resolve.alias
+### Webpack and resolve.alias
 
 At this point we were not interested in having our components as an independent node package that we would install into each app. We would like the development process to be more organic where a developer can commit changes to multiple apps and to the shared code in a single pull request. If we were to use our shared code as a third party component that would reduce the developers' flexibility.
 
@@ -105,7 +105,7 @@ We still didn't want to need to install first-party-as-third-party packages. Wou
 
 So we ran \`npm init\` on our shared code folder and gave it some minimum settings. We also set all the dependencies for our components, as well as react, babel, etc. We created a main index.js entry point to out external "package" and added \`babel-loader!\`to each exported directory. Next time we ran the main app, webpack would actually transpile the external code using babel and all the dependencies were used. Using npm's or yarn's caching capabilities, sharing dependencies is trivial. Running \`install\` twice is not really a big deal to the deployment time.
 
-## What about assets?
+### What about assets?
 
 We eventually ran into the situation where we would also like to share assets like icons, logos and fonts between apps, so putting them in the shared directory made perfect sense. It was simple to extend our setup to accomodate this. We used the module [\`file-loader\`](https://www.npmjs.com/package/file-loader) to load these files by addind the following rule to our webpack config:
 
@@ -123,7 +123,7 @@ And that's it. We had to add the loader dependency to both our project and to th
 	...
 	<img src={logo} alt="Simplesurance Logo"/>
 
-## Last Notes
+### Last Notes
 
 We're constantly trying to improve our approach at this point, and we're excited for the future of the project. We realize it's hard to create a future-proof architecture that won't let us down 4 years in. Specially in the frontend universe where every day there is a new technology that everyone is suddenly using. This is especially true in the Reactjs world where there are 15 competing standards for each feature of this technology. I'm looking at you, CSS in JS, but that's for another time.
 `
