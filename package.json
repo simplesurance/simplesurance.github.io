@@ -4,7 +4,7 @@
   "description": "✎",
   "repository": "git@github.com:simplesurance/simplesurance.github.io.git",
   "author": "Atila Fassina <hey@atilafassina.com>",
-  "license": "MIT",
+  "license": "MPL-2.0",
   "scripts": {
     "dev": "next",
     "build": "next build",
