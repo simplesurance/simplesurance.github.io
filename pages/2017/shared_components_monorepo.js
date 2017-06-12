@@ -19,7 +19,7 @@ A single repo organization brings some challenges, but it opens some possibiliti
 
 After some lengthy highly opinionated discussion, we went for a directory structure that is something like this:
 
-
+\`\`\`shell
 	ui
 	├─app1
 	╎  └─src
@@ -37,6 +37,7 @@ After some lengthy highly opinionated discussion, we went for a directory struct
 	      ├─colors
 	      ├─icons
 	      └─etc...
+\`\`\`
 
 
 The initial proposal was simple. We would just link the shared \`components\` directory in to each app's source. And we liked the solution, and we implemented it, and then it wasn't so simple. Webpack just doesn't deal with symlinks the way one would expect. It actually resolves the links and then any included packages would not be found in the actual location of the \`components\` directory.
@@ -47,6 +48,7 @@ At this point we were not interested in having our components as an independent 
 
 Turns our webpack can be told to use external code in a way that is transparent to the app source code using [\`resolve.alias\`](https://webpack.js.org/configuration/resolve/#resolve-alias):
 
+\`\`\`js
 	// webpack.config.js
 	module.exports = {
 		entry: ['babel-polyfill', './src/index.js'],
@@ -80,13 +82,14 @@ Turns our webpack can be told to use external code in a way that is transparent 
 			return \<Button\>GO!\</Button\>
 		}
 	}
-
+\`\`\`
 And this worked well, and the developers liked the solution, and then it didn't work. The paths were correctly resolved but our components, which are written in ES2016 were not being transpiled into ES5. Furthermore, the packages used by the components were still not being imported.
 
 We still didn't want to need to install first-party-as-third-party packages. Would it be possible to import our code as an external package without actually packing it, and thus taking advantage of webpack watching and simpler development flow? Turns out that was also possible.
 
 # Transpiling exports
 
+\`\`\`shell
 	ui
 	├─app1
 	└─components
@@ -96,12 +99,15 @@ We still didn't want to need to install first-party-as-third-party packages. Wou
 				├─.babelrc
 				├─index.js
 				└─package.json
+\`\`\`
 
+\`\`\`js
 	//index.js
 	export * from 'babel-loader!./common'
 	export * from 'babel-loader!./config/colors'
 	export * from 'babel-loader!./config/icons'
 	export * from 'babel-loader!./inputs'
+\`\`\`
 
 So we ran \`npm init\` on our shared code folder and gave it some minimum settings. We also set all the dependencies for our components, as well as react, babel, etc. We created a main index.js entry point to out external "package" and added \`babel-loader!\`to each exported directory. Next time we ran the main app, webpack would actually transpile the external code using babel and all the dependencies were used. Using npm's or yarn's caching capabilities, sharing dependencies is trivial. Running \`install\` twice is not really a big deal to the deployment time.
 
@@ -109,6 +115,7 @@ So we ran \`npm init\` on our shared code folder and gave it some minimum settin
 
 We eventually ran into the situation where we would also like to share assets like icons, logos and fonts between apps, so putting them in the shared directory made perfect sense. It was simple to extend our setup to accomodate this. We used the module [\`file-loader\`](https://www.npmjs.com/package/file-loader) to load these files by addind the following rule to our webpack config:
 
+\`\`\`json
 	{
 	 test: /\.(png|jpg|svg)$/,
 	 include:[
@@ -116,12 +123,15 @@ We eventually ran into the situation where we would also like to share assets li
 	 ],
 	 loader: 'file-loader',
 	}]
+\`\`\`
 
 And that's it. We had to add the loader dependency to both our project and to the shared components directory. But other than that, graphics were being loaded after this addition.
 
+\`\`\`jsx
 	import logoDesktop from 'assets/img/logo.svg'
 	...
 	<img src={logo} alt="Simplesurance Logo"/>
+\`\`\`
 
 ### Last Notes
 

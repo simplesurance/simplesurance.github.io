@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "next": "beta",
+    "prismjs": "^1.6.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-showdown": "^1.6.0"

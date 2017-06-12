@@ -1,11 +1,6 @@
 import Head from 'next/head'
 import Footer from '../components/Footer'
-
-const colors = {
-  simpleBlue: 'rgb(23,140,211)',
-  simpleGreen: 'rgb(84,172,55)',
-  simpleOrange: 'rgb(228,109,0)'
-}
+import { colors } from '../helpers/stylesConfig'
 
 export default ({ children }) => (<div>
   <Head>
