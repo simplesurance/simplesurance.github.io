@@ -4,6 +4,8 @@ import { colors } from '../helpers/stylesConfig'
 
 export default ({ children }) => (<div>
   <Head>
+    <title>Simplesurance Tech</ title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:600" rel="stylesheet" />
   </Head>
   <header>

@@ -138,4 +138,4 @@ And that's it. We had to add the loader dependency to both our project and to th
 We're constantly trying to improve our approach at this point, and we're excited for the future of the project. We realize it's hard to create a future-proof architecture that won't let us down 4 years in. Specially in the frontend universe where every day there is a new technology that everyone is suddenly using. This is especially true in the Reactjs world where there are 15 competing standards for each feature of this technology. I'm looking at you, CSS in JS, but that's for another time.
 `
 
-export default () => <Post><Markdown markup={ content }></Markdown></ Post>
+export default () => <Post><Markdown markup={ content } ghUser="lopis"></Markdown></ Post>

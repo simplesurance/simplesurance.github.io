@@ -4,7 +4,8 @@
       "id": "shared_components_monorepo",
       "date": "June 6 , 2017",
       "title": "Multi-app React code sharing in a monorepo",
-      "image": "puzzle.jpg"
+      "image": "puzzle.jpg",
+      "author": "lopis"
     }
   ]
 }

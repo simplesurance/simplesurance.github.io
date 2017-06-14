@@ -20,7 +20,8 @@ export default ({ avatar_url, name, blog, bio }) => (
 
       .avatar {
         float: left;
-        height: 100%;
+        max-height: 100%;
+        max-width: 40%;
         border-radius: 50%;
       }
 
@@ -32,6 +33,7 @@ export default ({ avatar_url, name, blog, bio }) => (
         flex-flow: column;
         justify-content: center;
         align-items: flex-start;
+        max-width: 40%;
       }
       .name {
         text-align: right;

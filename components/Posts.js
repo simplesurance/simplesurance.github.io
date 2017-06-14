@@ -6,12 +6,13 @@ export default () => (<div>
     Posts
   </h3>
   <ul className="postList">
-    {posts.map( ({id, title, date, image}) => (<li key={id} className="post">
+    {posts.map( ({id, title, date, image, author}) => (<li key={id} className="post">
       <span className="postDate">{date}</span>
       <img className="thumb" src={`./static/posts/${image}`} />
       <Link prefetch href={`${new Date(date).getFullYear()}/${id}`}>
         <a className="postTitle">{title}</a>
       </Link>
+      <span>by {author}</span>
       </li>))}
   </ul>
   <style jsx>{`
