@@ -1,7 +1,4 @@
 exports.exportPathMap = () => ({
   "/": { page: "/" },
-  // "/about": { page: "/about" },
-  // "/p/hello-nextjs": { page: "/post", query: { title: "hello-nextjs" } },
-  // "/p/learn-nextjs": { page: "/post", query: { title: "learn-nextjs" } },
-  // "/p/deploy-nextjs": { page: "/post", query: { title: "deploy-nextjs" } }
+  "/2017/shared_components_monorepo": { page: "/2017/shared_components_monorepo"}
 })
