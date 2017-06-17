@@ -1,0 +1,336 @@
+<!DOCTYPE html><html><head><link rel="preload" href="/_next/cdf52db5-d09d-40b7-b431-023ecff695ed/page/2017/shared_components_monorepo/index.js" as="script"/><link rel="preload" href="/_next/cdf52db5-d09d-40b7-b431-023ecff695ed/page/_error/index.js" as="script"/><link rel="preload" href="/_next/118725460af113dabda230d368cc3fb0/app.js" as="script"/><meta charset="utf-8" class="next-head"/><title data-jsx="3861983816" class="next-head">Simplesurance Tech</title><meta name="viewport" content="width=device-width, initial-scale=1.0" data-jsx="3861983816" class="next-head"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:600" data-jsx="3861983816" class="next-head"/><style id="__jsx-style-271098956">a[data-jsx="271098956"] {-webkit-transition: all 250ms linear;-moz-transition: all 250ms linear;-ms-transition: all 250ms linear;transition: all 250ms linear;}a[data-jsx="271098956"]:focus,a[data-jsx="271098956"]:hover {fill: rgb(23,140,211);}svg[data-jsx="271098956"] {width: 1.5em;}</style><style id="__jsx-style-940009271">.socialNav[data-jsx="940009271"] {padding: .5rem 0;text-align: center;background-color: rgb(200,200,200);}footer[data-jsx="940009271"] {display:-webkit-flex; display:flex;-webkit-flex-flow: column;-moz-flex-flow: column;flex-flow: column;justify-content: center;align-items: center;padding: 1rem 0;background-color: rgb(230,230,230);}p[data-jsx="940009271"] {display:-webkit-flex; display:flex;-webkit-flex-flow: row;-moz-flex-flow: row;flex-flow: row;justify-content: center;align-items: center;}.love[data-jsx="940009271"] {display:-webkit-flex; display:flex;align-items: center;justify-content: center;}.love[data-jsx="940009271"]::before {content: "{";padding-left: .5em;padding-right: .2em;}.love[data-jsx="940009271"]::after {content: "}";padding-left: .2em;padding-right: .5em;}.heart[data-jsx="940009271"] {font-size: 1.5em;-webkit-animation:a940009271beating-heart 1s alternate linear infinite;-moz-animation:a940009271beating-heart 1s alternate linear infinite;animation:a940009271beating-heart 1s alternate linear infinite;}.heart[data-jsx="940009271"]::before {content: '❤';color: rgb(190,70,90)        }@-webkit-keyframes a940009271beating-heart {0% {-webkit-transform: scale(1);-moz-transform: scale(1);-ms-transform: scale(1);transform: scale(1);}100% {-webkit-transform: scale(1.2);-moz-transform: scale(1.2);-ms-transform: scale(1.2);transform: scale(1.2);}}@-moz-keyframes a940009271beating-heart {0% {-webkit-transform: scale(1);-moz-transform: scale(1);-ms-transform: scale(1);transform: scale(1);}100% {-webkit-transform: scale(1.2);-moz-transform: scale(1.2);-ms-transform: scale(1.2);transform: scale(1.2);}}@keyframes a940009271beating-heart {0% {-webkit-transform: scale(1);-moz-transform: scale(1);-ms-transform: scale(1);transform: scale(1);}100% {-webkit-transform: scale(1.2);-moz-transform: scale(1.2);-ms-transform: scale(1.2);transform: scale(1.2);}}</style><style id="__jsx-style-2518522523">
+        .postWrapper {
+          width: 70vw;
+          margin: 0 auto;
+          padding: 2em 0 3em;
+          line-height: 1.5;
+        }
+
+        .postWrapper h2 {
+          text-align: center
+        }
+
+        .postWrapper h3 {
+          padding-top: 1.5em;
+        }
+
+        .postWrapper a {
+          color: rgb(20,20,20);
+          text-decoration: none;
+          font-weight: bold;
+          cursor: pointer;
+          transition: all 250ms linear;
+        }
+
+        .postWrapper a:focus,
+        .postWrapper a:hover {
+          color: rgb(228,109,0)
+        }
+
+        .postWrapper pre {
+          width: 120%;
+          margin: 2rem 0;
+          margin-left: -10%;
+        }
+
+        @media (min-width: 800px) {
+          .postWrapper {
+            width: 50vw;
+          }
+        }
+      </style><style id="__jsx-style-3362779934">
+code[class*="language-"],
+pre[class*="language-"] {
+    color: #393A34;
+    font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    font-size: 0.95em;
+    line-height: 1.2em;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    background: #C1DEF1;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    background: #C1DEF1;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+    border: 1px solid #dddddd;
+    background-color: white;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .2em;
+    padding-top: 1px; padding-bottom: 1px;
+    background: #f8f8f8;
+    border: 1px solid #dddddd;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #008000; font-style: italic;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.string {
+    color: #A31515;
+}
+
+.token.punctuation,
+.token.operator {
+    color: #393A34; /* no highlight */
+}
+
+.token.url,
+.token.symbol,
+.token.number,
+.token.boolean,
+.token.variable,
+.token.constant,
+.token.inserted {
+    color: #36acaa;
+}
+
+.token.atrule,
+.token.keyword,
+.token.attr-value,
+.language-autohotkey .token.selector,
+.language-json .token.boolean,
+.language-json .token.number,
+code[class*="language-css"]{
+    color: #0000ff;
+}
+
+.token.function {
+    color: #393A34;
+}
+.token.deleted,
+.language-autohotkey .token.tag {
+    color: #9a050f;
+}
+
+.token.selector,
+.language-autohotkey .token.keyword {
+    color: #00009f;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+.token.class-name,
+.language-json .token.property {
+    color: #2B91AF;
+}
+
+.token.tag,
+.token.selector {
+    color: #800000;
+}
+
+.token.attr-name,
+.token.property,
+.token.regex,
+.token.entity {
+    color: #ff0000;
+}
+
+.token.directive.tag  .tag {
+    background: #ffff00;
+    color: #393A34;
+}
+
+/* overrides color-values for the Line Numbers plugin
+ * http://prismjs.com/plugins/line-numbers/
+ */
+.line-numbers .line-numbers-rows {
+  border-right-color: #a5a5a5;
+}
+
+.line-numbers-rows > span:before {
+  color: #2B91AF;
+}
+
+/* overrides color-values for the Line Highlight plugin
+* http://prismjs.com/plugins/line-highlight/
+*/
+.line-highlight {
+  background: rgba(193, 222, 241, 0.2);
+  background: -webkit-linear-gradient(left, rgba(193, 222, 241, 0.2) 70%, rgba(221, 222, 241, 0));
+  background: linear-gradient(to right, rgba(193, 222, 241, 0.2) 70%, rgba(221, 222, 241, 0));
+}
+ </style><style id="__jsx-style-3443009660">.authorWrap[data-jsx="3443009660"] {width: 40vw;height: 7rem;padding-bottom: 5rem;margin: 0 auto;overflow: hidden;}.avatar[data-jsx="3443009660"] {float: left;max-height: 100%;max-width: 40%;border-radius: 50%;}.textWrap[data-jsx="3443009660"] {float: left;height: 100%;margin-left: 2rem;display:-webkit-flex; display:flex;-webkit-flex-flow: column;-moz-flex-flow: column;flex-flow: column;justify-content: center;align-items: flex-start;max-width: 40%;}.name[data-jsx="3443009660"] {text-align: right;font-size: 2rem;}.website[data-jsx="3443009660"] {display: block;text-align: right;text-decoration: none;font-weight: bold;cursor: pointer;color: rgb(20,20,20);-webkit-transition: all 250ms linear;-moz-transition: all 250ms linear;-ms-transition: all 250ms linear;transition: all 250ms linear;}.website[data-jsx="3443009660"]:focus,.website[data-jsx="3443009660"]:hover {color: rgb(228,109,0)      }</style><style id="__jsx-style-3861983816">
+    body {
+      border: 0;
+      padding: 0;
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+    }
+
+    h1 {
+      margin: 0;
+    }
+  header {
+    background-color: rgb(23,140,211);
+    height: 15rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    color: white;
+  }
+  </style></head><body><div><div id="__next"><div data-reactroot="" data-reactid="1" data-react-checksum="-1407243216"><div data-jsx="3861983816" data-reactid="2"><!-- react-empty: 3 --><header data-jsx="3861983816" data-reactid="4"><img src="/static/logo-white.svg" alt="Simplesurance logo" data-jsx="3861983816" data-reactid="5"/><h1 data-jsx="3861983816" data-reactid="6">Simplesurance Tech</h1></header><main data-jsx="3861983816" data-reactid="7"><script src="/static/vendor/prism.js" data-jsx="2518522523" data-reactid="8"></script><article class="postWrapper" data-jsx="2518522523" data-reactid="9"><div data-reactid="10"><h2 id="managingsharedcomponentswithmultiplereactjsappsinamonorepo" data-reactid="11"><!-- react-text: 12 -->Managing shared components with multiple react js apps in a monorepo<!-- /react-text --></h2><!-- react-text: 13 -->
+<!-- /react-text --><p data-reactid="14"><!-- react-text: 15 -->At simplesurance, we&#x27;ve been busy re-engineering big chunks of our codebase to bring it up to speed with the new technologies and software architecture trends. We&#x27;re transitioning from symfony/twig apps to a more diverse mesh of microservices and apps. We&#x27;re also moving towards a single git repository, a monorepo.<!-- /react-text --></p><!-- react-text: 16 -->
+<!-- /react-text --><p data-reactid="17"><!-- react-text: 18 -->A single repo organization brings some challenges, but it opens some possibilities too. Our monorepo contains everything from the microservices, the older symfony apps still in use, as well as the frontend react web and native apps. This opens door to having more shared code. Frontend-wise, this meant the possibility to finally work with the design team in a company-wide &quot;module palette&quot; and to finally have a consistent, and easily reusable and maintainable design between several apps.<!-- /react-text --></p><!-- react-text: 19 -->
+<!-- /react-text --><h3 id="toc" data-reactid="20"><!-- react-text: 21 -->TOC<!-- /react-text --></h3><!-- react-text: 22 -->
+<!-- /react-text --><ul data-reactid="23"><!-- react-text: 24 -->
+<!-- /react-text --><li data-reactid="25"><a href="#symboliclinks" data-reactid="26"><!-- react-text: 27 -->Symbolic links<!-- /react-text --></a></li><!-- react-text: 28 -->
+<!-- /react-text --><li data-reactid="29"><a href="#webpackandresolvealias" data-reactid="30"><!-- react-text: 31 -->Webpack and resolve.alias<!-- /react-text --></a></li><!-- react-text: 32 -->
+<!-- /react-text --><li data-reactid="33"><a href="#transpilingexports" data-reactid="34"><!-- react-text: 35 -->Transpiling exports<!-- /react-text --></a></li><!-- react-text: 36 -->
+<!-- /react-text --><li data-reactid="37"><a href="#whataboutassets" data-reactid="38"><!-- react-text: 39 -->What about assets?<!-- /react-text --></a></li><!-- react-text: 40 -->
+<!-- /react-text --><li data-reactid="41"><a href="#lastnotes" data-reactid="42"><!-- react-text: 43 -->Last notes?<!-- /react-text --></a></li><!-- react-text: 44 -->
+<!-- /react-text --></ul><!-- react-text: 45 -->
+<!-- /react-text --><h3 id="symboliclinks" data-reactid="46"><!-- react-text: 47 -->Symbolic links<!-- /react-text --></h3><!-- react-text: 48 -->
+<!-- /react-text --><p data-reactid="49"><!-- react-text: 50 -->After some lengthy highly opinionated discussion, we went for a directory structure that is something like this:<!-- /react-text --></p><!-- react-text: 51 -->
+<!-- /react-text --><pre data-reactid="52"><code class="shell language-shell" data-reactid="53"><!-- react-text: 54 -->    ui
+    ├─app1
+    ╎  └─src
+    ╎    └─components
+    ╎      ├─navigation
+    ╎      ├─forms
+    ╎      └─etc...
+    └─components
+       ├─inputs
+       ├─common
+       ╎  ├─Button
+       ╎  ├─Panel
+       ╎  └─etc...
+       └─config
+          ├─colors
+          ├─icons
+          └─etc...
+<!-- /react-text --></code></pre><!-- react-text: 55 -->
+<!-- /react-text --><p data-reactid="56"><!-- react-text: 57 -->The initial proposal was simple. We would just link the shared <!-- /react-text --><code data-reactid="58"><!-- react-text: 59 -->components<!-- /react-text --></code><!-- react-text: 60 --> directory in to each app&#x27;s source. And we liked the solution, and we implemented it, and then it wasn&#x27;t so simple. Webpack just doesn&#x27;t deal with symlinks the way one would expect. It actually resolves the links and then any included packages would not be found in the actual location of the <!-- /react-text --><code data-reactid="61"><!-- react-text: 62 -->components<!-- /react-text --></code><!-- react-text: 63 --> directory.<!-- /react-text --></p><!-- react-text: 64 -->
+<!-- /react-text --><h3 id="webpackandresolvealias" data-reactid="65"><!-- react-text: 66 -->Webpack and resolve.alias<!-- /react-text --></h3><!-- react-text: 67 -->
+<!-- /react-text --><p data-reactid="68"><!-- react-text: 69 -->At this point we were not interested in having our components as an independent node package that we would install into each app. We would like the development process to be more organic where a developer can commit changes to multiple apps and to the shared code in a single pull request. If we were to use our shared code as a third party component that would reduce the developers&#x27; flexibility.<!-- /react-text --></p><!-- react-text: 70 -->
+<!-- /react-text --><p data-reactid="71"><!-- react-text: 72 -->Turns our webpack can be told to use external code in a way that is transparent to the app source code using <!-- /react-text --><a href="https://webpack.js.org/configuration/resolve/#resolve-alias" data-reactid="73"><code data-reactid="74"><!-- react-text: 75 -->resolve.alias<!-- /react-text --></code></a><!-- react-text: 76 -->:<!-- /react-text --></p><!-- react-text: 77 -->
+<!-- /react-text --><pre data-reactid="78"><code class="js language-js" data-reactid="79"><!-- react-text: 80 -->    // webpack.config.js
+    module.exports = {
+        entry: [&#x27;babel-polyfill&#x27;, &#x27;./src/index.js&#x27;],
+        module: {
+            rules: [{
+                test: /.jsx?$/,
+                include: [
+                    path.resolve(__dirname, &#x27;../components&#x27;),
+                    path.resolve(__dirname, &#x27;src&#x27;)
+                ],
+                loader: &#x27;babel-loader&#x27;
+            }]
+        },
+        output: {
+            filename: &#x27;bundle.js&#x27;,
+            path: path.resolve(__dirname, &#x27;dist&#x27;)
+        },
+        resolve: {
+            alias: {
+                components: path.resolve(__dirname, &#x27;../components&#x27;)
+            }
+        }
+    }
+
+    // Example component
+    import React, { Component } from &#x27;react&#x27;
+    import { Button } from &#x27;components&#x27;
+
+    export default class Page extends Component {
+        render () {
+            return &lt;Button&gt;GO!&lt;/Button&gt;
+        }
+    }
+<!-- /react-text --></code></pre><!-- react-text: 81 -->
+<!-- /react-text --><p data-reactid="82"><!-- react-text: 83 -->And this worked well, and the developers liked the solution, and then it didn&#x27;t work. The paths were correctly resolved but our components, which are written in ES2016 were not being transpiled into ES5. Furthermore, the packages used by the components were still not being imported.<!-- /react-text --></p><!-- react-text: 84 -->
+<!-- /react-text --><p data-reactid="85"><!-- react-text: 86 -->We still didn&#x27;t want to need to install first-party-as-third-party packages. Would it be possible to import our code as an external package without actually packing it, and thus taking advantage of webpack watching and simpler development flow? Turns out that was also possible.<!-- /react-text --></p><!-- react-text: 87 -->
+<!-- /react-text --><h1 id="transpilingexports" data-reactid="88"><!-- react-text: 89 -->Transpiling exports<!-- /react-text --></h1><!-- react-text: 90 -->
+<!-- /react-text --><pre data-reactid="91"><code class="shell language-shell" data-reactid="92"><!-- react-text: 93 -->    ui
+    ├─app1
+    └─components
+         ├─inputs
+         ├─common
+         └─config
+                ├─.babelrc
+                ├─index.js
+                └─package.json
+<!-- /react-text --></code></pre><!-- react-text: 94 -->
+<!-- /react-text --><pre data-reactid="95"><code class="js language-js" data-reactid="96"><!-- react-text: 97 -->    //index.js
+    export * from &#x27;babel-loader!./common&#x27;
+    export * from &#x27;babel-loader!./config/colors&#x27;
+    export * from &#x27;babel-loader!./config/icons&#x27;
+    export * from &#x27;babel-loader!./inputs&#x27;
+<!-- /react-text --></code></pre><!-- react-text: 98 -->
+<!-- /react-text --><p data-reactid="99"><!-- react-text: 100 -->So we ran <!-- /react-text --><code data-reactid="101"><!-- react-text: 102 -->npm init<!-- /react-text --></code><!-- react-text: 103 --> on our shared code folder and gave it some minimum settings. We also set all the dependencies for our components, as well as react, babel, etc. We created a main index.js entry point to out external &quot;package&quot; and added <!-- /react-text --><code data-reactid="104"><!-- react-text: 105 -->babel-loader!<!-- /react-text --></code><!-- react-text: 106 -->to each exported directory. Next time we ran the main app, webpack would actually transpile the external code using babel and all the dependencies were used. Using npm&#x27;s or yarn&#x27;s caching capabilities, sharing dependencies is trivial. Running <!-- /react-text --><code data-reactid="107"><!-- react-text: 108 -->install<!-- /react-text --></code><!-- react-text: 109 --> twice is not really a big deal to the deployment time.<!-- /react-text --></p><!-- react-text: 110 -->
+<!-- /react-text --><h3 id="whataboutassets" data-reactid="111"><!-- react-text: 112 -->What about assets?<!-- /react-text --></h3><!-- react-text: 113 -->
+<!-- /react-text --><p data-reactid="114"><!-- react-text: 115 -->We eventually ran into the situation where we would also like to share assets like icons, logos and fonts between apps, so putting them in the shared directory made perfect sense. It was simple to extend our setup to accomodate this. We used the module <!-- /react-text --><a href="https://www.npmjs.com/package/file-loader" data-reactid="116"><code data-reactid="117"><!-- react-text: 118 -->file-loader<!-- /react-text --></code></a><!-- react-text: 119 --> to load these files by addind the following rule to our webpack config:<!-- /react-text --></p><!-- react-text: 120 -->
+<!-- /react-text --><pre data-reactid="121"><code class="json language-json" data-reactid="122"><!-- react-text: 123 -->    {
+     test: /.(png|jpg|svg)$/,
+     include:[
+         path.resolve(__dirname, &#x27;../components/assets&#x27;)
+     ],
+     loader: &#x27;file-loader&#x27;,
+    }]
+<!-- /react-text --></code></pre><!-- react-text: 124 -->
+<!-- /react-text --><p data-reactid="125"><!-- react-text: 126 -->And that&#x27;s it. We had to add the loader dependency to both our project and to the shared components directory. But other than that, graphics were being loaded after this addition.<!-- /react-text --></p><!-- react-text: 127 -->
+<!-- /react-text --><pre data-reactid="128"><code class="jsx language-jsx" data-reactid="129"><!-- react-text: 130 -->    import logoDesktop from &#x27;assets/img/logo.svg&#x27;
+    ...
+    &lt;img src={logo} alt=&quot;Simplesurance Logo&quot;/&gt;
+<!-- /react-text --></code></pre><!-- react-text: 131 -->
+<!-- /react-text --><h3 id="lastnotes" data-reactid="132"><!-- react-text: 133 -->Last Notes<!-- /react-text --></h3><!-- react-text: 134 -->
+<!-- /react-text --><p data-reactid="135"><!-- react-text: 136 -->We&#x27;re constantly trying to improve our approach at this point, and we&#x27;re excited for the future of the project. We realize it&#x27;s hard to create a future-proof architecture that won&#x27;t let us down 4 years in. Specially in the frontend universe where every day there is a new technology that everyone is suddenly using. This is especially true in the Reactjs world where there are 15 competing standards for each feature of this technology. I&#x27;m looking at you, CSS in JS, but that&#x27;s for another time.<!-- /react-text --></p></div></article><div class="authorWrap" data-jsx="3443009660" data-reactid="137"><img class="avatar" data-jsx="3443009660" data-reactid="138"/><section class="textWrap" data-jsx="3443009660" data-reactid="139"><strong class="name" data-jsx="3443009660" data-reactid="140"></strong><p class="bio" data-jsx="3443009660" data-reactid="141"></p><a class="website" target="_blank" data-jsx="3443009660" data-reactid="142"></a></section><!-- react-empty: 143 --></div><!-- react-empty: 144 --><!-- react-empty: 145 --></main><div data-jsx="940009271" data-reactid="146"><nav class="socialNav" data-jsx="940009271" data-reactid="147"><a href="https://github.com/simplesurance" target="_blank" title="Github" data-jsx="271098956" data-reactid="148"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" data-jsx="271098956" data-reactid="149"><path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.09-.202-.36-1.015.07-2.117 0 0 .67-.215 2.2.82.64-.178 1.32-.266 2-.27.68.004 1.36.092 2 .27 1.52-1.035 2.19-.82 2.19-.82.43 1.102.16 1.915.08 2.117.51.56.82 1.274.82 2.147 0 3.073-1.87 3.75-3.65 3.947.28.24.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.14.46.55.38C13.71 14.53 16 11.53 16 8c0-4.418-3.582-8-8-8" data-jsx="271098956" data-reactid="150"></path></svg><!-- react-empty: 151 --></a></nav><footer data-jsx="940009271" data-reactid="152"><p data-jsx="940009271" data-reactid="153"><!-- react-text: 154 -->crafted with <!-- /react-text --><strong class="love" data-jsx="940009271" data-reactid="155"><span class="heart" data-jsx="940009271" data-reactid="156"></span></strong><!-- react-text: 157 --> by the Simplesurance crew<!-- /react-text --></p></footer><!-- react-empty: 158 --></div><!-- react-empty: 159 --></div></div></div><div id="__next-error"></div></div><div><script>
+          __NEXT_DATA__ = {"props":{},"pathname":"/2017/shared_components_monorepo","buildId":"cdf52db5-d09d-40b7-b431-023ecff695ed","buildStats":{"app.js":{"hash":"118725460af113dabda230d368cc3fb0"}},"assetPrefix":"","nextExport":true,"err":null,"chunks":[]}
+          module={}
+          __NEXT_LOADED_PAGES__ = []
+          __NEXT_LOADED_CHUNKS__ = []
+
+          __NEXT_REGISTER_PAGE = function (route, fn) {
+            __NEXT_LOADED_PAGES__.push({ route: route, fn: fn })
+          }
+
+          __NEXT_REGISTER_CHUNK = function (chunkName, fn) {
+            __NEXT_LOADED_CHUNKS__.push({ chunkName: chunkName, fn: fn })
+          }
+        </script><script async="" id="__NEXT_PAGE__/2017/shared_components_monorepo" type="text/javascript" src="/_next/cdf52db5-d09d-40b7-b431-023ecff695ed/page/2017/shared_components_monorepo/index.js"></script><script async="" id="__NEXT_PAGE__/_error" type="text/javascript" src="/_next/cdf52db5-d09d-40b7-b431-023ecff695ed/page/_error/index.js"></script><div></div><script type="text/javascript" src="/_next/118725460af113dabda230d368cc3fb0/app.js" async=""></script></div></body></html>
