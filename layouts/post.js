@@ -22,7 +22,7 @@ export default class Post extends Component {
   }
 
   requestAuthorData = async (username) => {
-    const response = await fetch(`http://api.github.com/users/${username}`)
+    const response = await fetch(`//api.github.com/users/${username}`)
     return response.json()
   }
 
