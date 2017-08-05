@@ -52,11 +52,6 @@ export default class Post extends Component {
           padding-top: 1.5em;
         }
 
-        .postWrapper p {
-          text-align: justify;
-          text-indent: 2em;
-        }
-
         .postWrapper a {
           color: ${colors.text.darkGrey};
           text-decoration: none;
@@ -71,9 +66,9 @@ export default class Post extends Component {
         }
 
         .postWrapper pre {
-          width: 100%;
+          width: 120%;
           margin: 2rem 0;
-          box-sizing: border-box;
+          margin-left: -10%;
         }
 
         @media (min-width: 800px) {
