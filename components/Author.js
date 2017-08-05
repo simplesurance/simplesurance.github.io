@@ -6,27 +6,25 @@ export default ({ avatar_url, name, blog, bio }) => (
     <section className="textWrap">
       <strong className="name">{name}</strong>
       <p className="bio">{bio}</p>
-      <a className="website" href={blog} target="_blank">{blog}</ a>
+      <a className="website" href={blog} target="_blank">{blog}</a>
     </section>
 
     <style jsx>{`
       .authorWrap {
         width: 40vw;
-        height: 7rem;
         padding-bottom: 5rem;
         margin: 0 auto;
         overflow: hidden;
+        display: flex;
       }
 
       .avatar {
-        float: left;
-        max-height: 100%;
-        max-width: 40%;
+        height: 7rem;
+        width: 7rem;
         border-radius: 50%;
       }
 
       .textWrap {
-        float: left;
         height: 100%;
         margin-left: 2rem;
         display: flex;

@@ -4,9 +4,9 @@ import { colors } from '../helpers/stylesConfig'
 
 export default ({ children }) => (<div>
   <Head>
-    <title>Simplesurance Tech</ title>
+    <title>Simplesurance Tech</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:600" rel="stylesheet" />
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet" />
   </Head>
   <header>
     <img src="/static/logo-white.svg" alt="Simplesurance logo"/>
@@ -23,6 +23,9 @@ export default ({ children }) => (<div>
       margin: 0;
       font-family: 'Lato', sans-serif;
       font-weight: 300;
+      background-color: #fefefe;
+      color: #333;
+      font-size: 22px;
     }
 
     h1 {
@@ -42,7 +45,3 @@ export default ({ children }) => (<div>
   }
   `}</style>
 </div>)
-
-
-
-

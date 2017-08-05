@@ -4,3 +4,5 @@
 
 # external dependencies
 node_modules
+
+out/*
