@@ -27,11 +27,8 @@ export default ({ avatar_url, name, blog, bio }) => (
       .textWrap {
         height: 100%;
         margin-left: 2rem;
-        display: flex;
-        flex-flow: column;
         justify-content: center;
         align-items: flex-start;
-        max-width: 40%;
       }
       .name {
         text-align: right;
