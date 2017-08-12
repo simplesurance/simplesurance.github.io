@@ -6,7 +6,7 @@ const content = `
 
 At simplesurance, we've been busy re-engineering big chunks of our codebase to bring it up to speed with the new technologies and software architecture trends. We're transitioning from symfony/twig apps to a more diverse mesh of microservices and apps. We're also moving towards a single git repository, a monorepo.
 
-A single repo organization brings some challenges, but it opens some possibilities too. Our monorepo contains everything from the microservices, the older symfony apps still in use, as well as the frontend react web and native apps. This opens door to having more shared code. Frontend-wise, this meant the possibility to finally work with the design team in a company-wide "module palette" and to finally have a consistent, and easily reusable and maintainable design between several apps.
+A single repo organization brings some challenges, but it opens some possibilities too. Our monorepo contains everything from the microservices, the older symfony apps still in use, as well as the frontend react web and native apps. This opens doors to having more shared code. Frontend-wise, this meant the possibility to finally work with the design team in a company-wide "module palette" and to finally have a consistent, and easily reusable and maintainable design between several apps.
 
 ### TOC
  * [Symbolic links](#symboliclinks)
@@ -17,30 +17,35 @@ A single repo organization brings some challenges, but it opens some possibiliti
 
 ### Symbolic links
 
-After some lengthy highly opinionated discussion, we went for a directory structure that is something like this:
+After some lengthy - and highly opinionated - discussion, we went for a directory structure that is something like this:
 
 \`\`\`shell
 	ui
-	├─app1
-	╎  └─src
-	╎    └─components
-	╎      ├─navigation
-	╎      ├─forms
-	╎      └─etc...
+	├─reactapp1
+	╎  └─...
+	├─reactapp2
+	╎  └─...
 	└─components
-	   ├─inputs
+	   ├─assets
+	   ╎  └─...
 	   ├─common
 	   ╎  ├─Button
 	   ╎  ├─Panel
-	   ╎  └─etc...
-	   └─config
-	      ├─colors
-	      ├─icons
-	      └─etc...
+	   ╎  └─...
+	   ╎  └─...
+	   ├─config
+	   ╎  ├─colors
+	   ╎  ├─icons
+	   ╎  └─...
+	   └─inputs
+	   ╎  ├─Input
+	   ╎  ├─TextArea
+	   ╎  └─...
+	   └─...
 \`\`\`
 
 
-The initial proposal was simple. We would just link the shared \`components\` directory in to each app's source. And we liked the solution, and we implemented it, and then it wasn't so simple. Webpack just doesn't deal with symlinks the way one would expect. It actually resolves the links and then any included packages would not be found in the actual location of the \`components\` directory.
+The initial proposal was simple. We would create a symbolic link from the shared \`components\` directory into each app's source. We liked the solution, so we implemented it, and then it wasn't so simple. Webpack just doesn't deal with symlinks the way one would expect. It actually resolves the symbolic links and then any included packages would not be found in the actual location of the \`components\` directory.
 
 ### Webpack and resolve.alias
 
@@ -83,33 +88,45 @@ Turns our webpack can be told to use external code in a way that is transparent 
 		}
 	}
 \`\`\`
-And this worked well, and the developers liked the solution, and then it didn't work. The paths were correctly resolved but our components, which are written in ES2016 were not being transpiled into ES5. Furthermore, the packages used by the components were still not being imported.
+This worked well, and the developers liked the solution, and then it didn't work. The paths were correctly resolved but our components, which are written in ES2016, were not being transpiled into ES5. Furthermore, the packages used by the components were still not being imported.
 
 We still didn't want to need to install first-party-as-third-party packages. Would it be possible to import our code as an external package without actually packing it, and thus taking advantage of webpack watching and simpler development flow? Turns out that was also possible.
 
 # Transpiling exports
 
 \`\`\`shell
-	ui
-	├─app1
-	└─components
-		 ├─inputs
-		 ├─common
-		 └─config
-				├─.babelrc
-				├─index.js
-				└─package.json
+  ui
+  ├─app1
+  └─components
+    ├─src
+    ╎  ├─inputs
+    ╎  ├─common
+    ╎  └─config
+    ├─.babelrc
+    ├─index.js
+    └─package.json
 \`\`\`
+
+So we ran \`yarn init\` on our shared code folder and gave it some minimum settings. We also set all the dependencies for our components, as well as react, babel, etc. We created a main index.js entry point to out external "package". Next time we ran the main app, webpack would actually transpile the external code using babel and all the dependencies were used. Using npm's or yarn's caching capabilities, sharing dependencies is trivial. Running \`install\` twice is not really a big deal to the deployment time and can be simplified with a yarn script. Last step is to instruct \`babel\` to transpile our shared code before transpiling the app code.
 
 \`\`\`js
-	//index.js
-	export * from 'babel-loader!./common'
-	export * from 'babel-loader!./config/colors'
-	export * from 'babel-loader!./config/icons'
-	export * from 'babel-loader!./inputs'
+  // webpack.config.js
+  include: [
+    path.resolve(__dirname, '../components/src'),
+    path.resolve(__dirname, 'src'),
+  ],
+  loader: 'babel-loader'
 \`\`\`
 
-So we ran \`npm init\` on our shared code folder and gave it some minimum settings. We also set all the dependencies for our components, as well as react, babel, etc. We created a main index.js entry point to out external "package" and added \`babel-loader!\`to each exported directory. Next time we ran the main app, webpack would actually transpile the external code using babel and all the dependencies were used. Using npm's or yarn's caching capabilities, sharing dependencies is trivial. Running \`install\` twice is not really a big deal to the deployment time.
+An alternative is to instruct the shared "package" to transpile itself with babel, like this:
+
+\`\`\`js
+    //index.js
+    export * from 'babel-loader!./common'
+    export * from 'babel-loader!./config/colors'
+    export * from 'babel-loader!./config/icons'
+    export * from 'babel-loader!./inputs'
+\`\`\`
 
 ### What about assets?
 
